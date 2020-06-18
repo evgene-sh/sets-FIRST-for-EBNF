@@ -13,7 +13,7 @@ def get_first(formulas):
 
 def first_atom(firsts, name, atom):
     if atom.type == 'expression':
-        first_expr(firsts, name, atom.expr)
+        first_expr(firsts, name, atom.val)
     elif atom.type == 'term':
         firsts[name].add(atom.val)
     elif atom.type == 'noterm':
